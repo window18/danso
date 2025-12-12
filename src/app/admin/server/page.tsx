@@ -22,7 +22,7 @@ const Server = () => {
   const [selectedNav, setSelectedNav] = useState(navList[0]);
 
   return (
-    <div className="h-full py-[30px] px-[55px] flex gap-5">
+    <div className="h-[90%] pt-[30px] px-[55px] flex gap-5">
       <div className="bg-[#DBDBDB] dark:bg-[#0F1827] h-full w-[300px] rounded-lg flex flex-col overflow-hidden">
         {navList.map((item) => (
           <div
@@ -47,7 +47,7 @@ const Server = () => {
         ))}
       </div>
 
-      <div className="w-full h-full rounded-lg flex flex-col">
+      <div className="w-full rounded-lg">
         {selectedNav === navList[0] && <PageInfo />}
         {selectedNav === navList[1] && <PageUsers />}
         {selectedNav === navList[2] && <PageEvents />}

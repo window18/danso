@@ -59,75 +59,53 @@ const PageEvents = () => {
           <span className="font-light text-[14px]">Экспортировать</span>
         </div>
       </div>
-      <div className="h-full bg-[#DBDBDB] dark:bg-[#0F1827] px-10 py-5">
-        {/*table*/}
-        <div className="w-full min-h-[300px] h-full bg-white dark:bg-[#070F19] overflow-auto relative nice-scrollbar flex flex-col">
-          {/*thead*/}
-          <div className="border-b-2 sticky top-0 bg-white dark:bg-[#070F19]">
-            <span className="px-20 py-1 inline-block">Типы</span>
-            <span className="px-20 py-1 border-x-2 inline-block">События</span>
-            <span className="px-20 py-1 inline-block">История</span>
-            <span className="px-20 py-1 border-x-2 inline-block">
-              Состояние
-            </span>
-          </div>
-          {/*tbody*/}
-          <div className="flex flex-col gap-2">
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-            <div>
-              <span className="px-20 py-1 inline-block">Типы</span>
-              <span className="px-20 py-1 inline-block">События</span>
-              <span className="px-20 py-1 inline-block">История</span>
-              <span className="px-20 py-1 inline-block">Состояние</span>
-            </div>
-          </div>
+      {/*<div className="h-full bg-[#DBDBDB] dark:bg-[#0F1827] px-10 pt-5 overflow-hidden">
+        <div className="h-full overflow-y-auto custom-scroll">
+          <table className="w-full border-collapse text-center">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="p-2 border">ID</th>
+                <th className="p-2 border">Имя</th>
+                <th className="p-2 border">Значение</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {Array.from({ length: 50 }).map((_, i) => (
+                <tr key={i} className="odd:bg-gray-100">
+                  <td className="p-2 border">{i + 1}</td>
+                  <td className="p-2 border">Элемент {i + 1}</td>
+                  <td className="p-2 border">Данные</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>*/}
+      <div className="px-10 py-10 h-full overflow-hidden bg-[#DBDBDB] dark:bg-[#0F1827]">
+        <div className="h-full overflow-y-auto nice-scrollbar">
+          <table className="w-full text-center bg-white dark:bg-[#070F19]">
+            <thead className="bg-white dark:bg-[#070F19]">
+              <tr className="border-b-2 border-[#DBDBDB] dark:border-[#585353]">
+                <th className="p-2">Типы</th>
+                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">События</th>
+                <th className="p-2">История</th>
+                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Состояние</th>
+                <th className="p-2 w-2/6"></th>
+              </tr>
+            </thead>
+
+            <tbody className="">
+              {Array.from({ length: 50 }).map((_, i) => (
+                <tr key={i} className="">
+                  <td className="p-2 border">{i + 1}</td>
+                  <td className="p-2 border">Элемент {i + 1}</td>
+                  <td className="p-2 border">Данные</td>
+                  <td className="p-2 border">Активный</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

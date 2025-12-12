@@ -9,7 +9,6 @@ import {
 } from "../ui/dropdown-menu";
 import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
-import { Layout2x2 } from "./Layout2x2";
 
 interface CameraTemplate {
   id: number;

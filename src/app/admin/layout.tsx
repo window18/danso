@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="h-full flex flex-col">
+    <main className="h-screen flex flex-col overflow-hidden">
       <Header />
       {children}
     </main>
