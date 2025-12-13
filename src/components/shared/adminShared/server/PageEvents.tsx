@@ -4,7 +4,7 @@ import React from "react";
 const PageEvents = () => {
   return (
     <div className="flex flex-col h-full gap-4">
-      <div className=" bg-[#DBDBDB] dark:bg-[#0F1827] h-[180px] px-4 py-4 flex flex-col gap-4">
+      <div className=" bg-[#DBDBDB] dark:bg-[#0F1827] max-h-[180px] px-4 py-4 flex flex-col gap-4">
         <h2 className="font-bold text-[17px]">Журнал событий</h2>
         <div className="flex items-center gap-3">
           <Image
@@ -59,31 +59,8 @@ const PageEvents = () => {
           <span className="font-light text-[14px]">Экспортировать</span>
         </div>
       </div>
-      {/*<div className="h-full bg-[#DBDBDB] dark:bg-[#0F1827] px-10 pt-5 overflow-hidden">
-        <div className="h-full overflow-y-auto custom-scroll">
-          <table className="w-full border-collapse text-center">
-            <thead>
-              <tr className="bg-gray-200">
-                <th className="p-2 border">ID</th>
-                <th className="p-2 border">Имя</th>
-                <th className="p-2 border">Значение</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {Array.from({ length: 50 }).map((_, i) => (
-                <tr key={i} className="odd:bg-gray-100">
-                  <td className="p-2 border">{i + 1}</td>
-                  <td className="p-2 border">Элемент {i + 1}</td>
-                  <td className="p-2 border">Данные</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>*/}
       <div className="px-10 py-10 h-full overflow-hidden bg-[#DBDBDB] dark:bg-[#0F1827]">
-        <div className="h-full overflow-y-auto nice-scrollbar">
+        <div className="h-full overflow-y-auto table-scroll">
           <table className="w-full text-center bg-white dark:bg-[#070F19]">
             <thead className="bg-white dark:bg-[#070F19]">
               <tr className="border-b-2 border-[#DBDBDB] dark:border-[#585353]">
@@ -95,9 +72,9 @@ const PageEvents = () => {
               </tr>
             </thead>
 
-            <tbody className="">
+            <tbody>
               {Array.from({ length: 50 }).map((_, i) => (
-                <tr key={i} className="">
+                <tr key={i}>
                   <td className="p-2 border">{i + 1}</td>
                   <td className="p-2 border">Элемент {i + 1}</td>
                   <td className="p-2 border">Данные</td>

@@ -20,7 +20,7 @@ export const Header: React.FC<Props> = ({ className }) => {
     { href: "/video", label: "Видеонаблюдения" },
     { href: "/", label: "Главная" },
     { href: "/search", label: "Поиск по ШК" },
-    { href: "/admin/camera", label: "Администрирование" },
+    { href: "/admin/", label: "Администрирование" },
   ];
 
   return (
@@ -47,10 +47,9 @@ export const Header: React.FC<Props> = ({ className }) => {
         <nav className="relative flex items-center">
           <div className="gap-8 flex">
             {navItems.map((item) => {
-              // Специальная логика только для админки
               const isActive =
-                item.href === "/admin/camera"
-                  ? pathname.startsWith("/admin") // ← любой путь, начинающийся с /admin
+                item.href === "/admin/"
+                  ? pathname.startsWith("/admin")
                   : pathname === item.href;
 
               return (

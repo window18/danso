@@ -12,7 +12,7 @@ export const Header: React.FC<Props> = ({ className }) => {
   const pathname = usePathname();
 
   const navItems = [
-    { href: "/admin/camera", label: "Камеры" },
+    { href: "/admin", label: "Камеры" },
     { href: "/admin/analytics", label: "Аналитика" },
     { href: "/admin/mapcamera", label: "Карта камер" },
     { href: "/admin/users", label: "Пользователи" },
@@ -45,7 +45,6 @@ export const Header: React.FC<Props> = ({ className }) => {
             >
               {item.label}
 
-              {/* Красивая синяя полоса с плавной анимацией */}
               {isActive && (
                 <motion.div
                   layoutId="admin-nav-underline"

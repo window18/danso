@@ -2,7 +2,8 @@
 import PageInfo from "@/src/components/shared/adminShared/server/PageInfo";
 import PageUsers from "@/src/components/shared/adminShared/server/PageUsers";
 import PageEvents from "@/src/components/shared/adminShared/server/PageEvents";
-import React, { useState } from "react";
+import { useState } from "react";
+import PageDiskUsage from "@/src/components/shared/adminShared/server/PageDiskUsage";
 
 const Server = () => {
   const navList = [

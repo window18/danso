@@ -55,101 +55,35 @@ const PageUsers = () => {
           <div className="w-[140px] h-7 bg-[#919191]"></div>
         </div>
       </div>
-      <div className="bg-[#DBDBDB] dark:bg-[#0F1827] h-full justify-center items-center flex flex-col px-4 py-4">
-        <table className="dark:bg-[#070F19] bg-[#FFFFFF] w-full h-full">
-          <thead className="border-b-2 h-[45px]">
-            <tr>
-              <th className="w-20"></th>
-              <th className="border-x-2">Имя</th>
-              <th className="border-x-2">Группа</th>
-              <th className="border-x-2">Отключить</th>
-              <th className="border-x-2">Описание</th>
-              <th className="">Состояние</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th className="border-r-2">1</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">2</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">3</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">4</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">5</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">6</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">7</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">8</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">9</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th className="border-r-2">10</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-          </tbody>
-        </table>
+      <div className="px-10 py-10 h-full overflow-hidden bg-[#DBDBDB] dark:bg-[#0F1827]">
+        <div className="h-full overflow-y-auto table-scroll">
+          <table className="w-full text-center bg-white dark:bg-[#070F19]">
+            <thead className="bg-white dark:bg-[#070F19]">
+              <tr className="border-b-2 border-[#DBDBDB] dark:border-[#585353]">
+                <th className="p-2"></th>
+                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Имя</th>
+                <th className="p-2">Группа</th>
+                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Отключить</th>
+                <th className="p-2">Описание</th>
+                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Состояние</th>
+                <th className="p-2 w-1/3"></th>
+              </tr>
+            </thead>
+
+            <tbody className="">
+              {Array.from({ length: 50 }).map((_, i) => (
+                <tr key={i} className="">
+                  <td className="p-2 border">{i + 1}</td>
+                  <td className="p-2 border">Элемент {i + 1}</td>
+                  <td className="p-2 border">Данные</td>
+                  <td className="p-2 border">Активный</td>
+                  <td className="p-2 border">Активный</td>
+                  <td className="p-2 border">Активный</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
