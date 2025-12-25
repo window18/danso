@@ -8,7 +8,7 @@ const PageEvents = () => {
         <h2 className="font-bold text-[17px]">Журнал событий</h2>
         <div className="flex items-center gap-3">
           <Image
-            src="/job.png"
+            src="/icons-admin-svg/events.svg"
             width="50"
             height="50"
             alt="Job Icon"

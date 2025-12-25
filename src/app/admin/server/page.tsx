@@ -4,6 +4,13 @@ import PageUsers from "@/src/components/shared/adminShared/server/PageUsers";
 import PageEvents from "@/src/components/shared/adminShared/server/PageEvents";
 import { useState } from "react";
 import PageDiskUsage from "@/src/components/shared/adminShared/server/PageDiskUsage";
+import PageCameraUsage from "@/src/components/shared/adminShared/server/PageCameraUsage";
+import PageConnections from "@/src/components/shared/adminShared/server/PageConnections";
+import PageSchedule from "@/src/components/shared/adminShared/server/PageSchedule";
+import PageActions from "@/src/components/shared/adminShared/server/PageActions";
+import PageScripts from "@/src/components/shared/adminShared/server/PageScripts";
+import PageRecordingProfiles from "@/src/components/shared/adminShared/server/PageRecordingProfiles";
+import PageDisks from "@/src/components/shared/adminShared/server/PageDisks";
 
 const Server = () => {
   const navList = [
