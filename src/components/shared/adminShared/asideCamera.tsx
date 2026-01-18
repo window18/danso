@@ -33,6 +33,90 @@ export const AsideAdminCamera: React.FC<Props> = ({ className }) => {
       totalAmount: "copy",
     },
     {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
       active: false,
       invoice: "Camera 2",
       ip: "none",
@@ -75,7 +159,7 @@ export const AsideAdminCamera: React.FC<Props> = ({ className }) => {
   return (
     <div
       className={cn(
-        "w-100 h-full bg-[#E3E3E3] dark:bg-[#0F1827] px-4 py-4 gap-5 flex flex-col",
+        "w-100 bg-[#E3E3E3] dark:bg-[#0F1827] px-4 py-4 gap-5 flex flex-col",
         className,
       )}
     >
@@ -160,38 +244,40 @@ export const AsideAdminCamera: React.FC<Props> = ({ className }) => {
         </div>
       </div>
       {/*Third block*/}
-      <div className="max-h-[300px] overflow-auto">
+      <div className="admin-table">
         <h4 className="text-[15px] font-bold">Найденно камер 0</h4>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-[100px]">Камеры</TableHead>
-              <TableHead>IP Адрес</TableHead>
-              <TableHead></TableHead>
-              <TableHead className="text-right">Действие</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {invoices.map((invoice) => (
-              <TableRow key={invoice.invoice}>
-                <TableCell className="font-medium flex items-center gap-1">
-                  <span
-                    className={cn(
-                      "inline-block w-2 h-2 rounded-full",
-                      invoice.active ? "bg-green-500" : "bg-red-500",
-                    )}
-                  />
-                  {invoice.invoice}
-                </TableCell>
-                <TableCell className="text-center">{invoice.ip}</TableCell>
-                <TableCell></TableCell>
-                <TableCell className="text-center cursor-pointer">
-                  {invoice.totalAmount}
-                </TableCell>
+        <div className="overflow-auto table-scroll h-full">
+          <Table>
+            <TableHeader className="sticky top-0">
+              <TableRow>
+                <TableHead className="w-[100px]">Камеры</TableHead>
+                <TableHead>IP Адрес</TableHead>
+                <TableHead></TableHead>
+                <TableHead className="text-right">Действие</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {invoices.map((invoice) => (
+                <TableRow key={invoice.invoice}>
+                  <TableCell className="font-medium flex items-center gap-1">
+                    <span
+                      className={cn(
+                        "inline-block w-2 h-2 rounded-full",
+                        invoice.active ? "bg-green-500" : "bg-red-500",
+                      )}
+                    />
+                    {invoice.invoice}
+                  </TableCell>
+                  <TableCell className="text-center">{invoice.ip}</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className="text-center cursor-pointer">
+                    {invoice.totalAmount}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </div>
     </div>
   );

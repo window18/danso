@@ -36,9 +36,105 @@ export default function Admin() {
       ip: "none",
       totalAmount: "copy",
     },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
+    {
+      active: true,
+      invoice: "Camera 1",
+      ip: "192.168.1.1",
+      totalAmount: "copy",
+    },
+    {
+      active: false,
+      invoice: "Camera 2",
+      ip: "none",
+      totalAmount: "copy",
+    },
   ];
   return (
-    <div className="flex justify-between h-full pl-26 gap-7">
+    <div className="flex justify-between admin pl-26 gap-7">
       <div className="w-full h-full py-5 flex flex-col gap-4">
         <div className="flex justify-between w-full">
           <div className="relative cursor-pointer">
@@ -115,38 +211,40 @@ export default function Admin() {
           </div>
         </div>
         {/*Third block*/}
-        <div className="flex flex-col max-h-[570px] overflow-auto">
+        <div className="admin-table-two">
           <h4 className="text-[15px] font-bold">Найденно камер 0</h4>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-[100px]">Камеры</TableHead>
-                <TableHead>IP Адрес</TableHead>
-                <TableHead></TableHead>
-                <TableHead className="text-right">Действие</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {invoices.map((invoice) => (
-                <TableRow key={invoice.invoice}>
-                  <TableCell className="font-medium flex items-center gap-1">
-                    <span
-                      className={cn(
-                        "inline-block w-2 h-2 rounded-full",
-                        invoice.active ? "bg-green-500" : "bg-red-500",
-                      )}
-                    />
-                    {invoice.invoice}
-                  </TableCell>
-                  <TableCell className="text-center">{invoice.ip}</TableCell>
-                  <TableCell></TableCell>
-                  <TableCell className="text-center cursor-pointer">
-                    {invoice.totalAmount}
-                  </TableCell>
+          <div className="overflow-auto table-scroll h-full">
+            <Table>
+              <TableHeader className="sticky top-0">
+                <TableRow>
+                  <TableHead className="w-[100px]">Камеры</TableHead>
+                  <TableHead>IP Адрес</TableHead>
+                  <TableHead></TableHead>
+                  <TableHead className="text-right">Действие</TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              </TableHeader>
+              <TableBody>
+                {invoices.map((invoice) => (
+                  <TableRow key={invoice.invoice}>
+                    <TableCell className="font-medium flex items-center gap-1">
+                      <span
+                        className={cn(
+                          "inline-block w-2 h-2 rounded-full",
+                          invoice.active ? "bg-green-500" : "bg-red-500",
+                        )}
+                      />
+                      {invoice.invoice}
+                    </TableCell>
+                    <TableCell className="text-center">{invoice.ip}</TableCell>
+                    <TableCell></TableCell>
+                    <TableCell className="text-center cursor-pointer">
+                      {invoice.totalAmount}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </div>
       </div>
     </div>

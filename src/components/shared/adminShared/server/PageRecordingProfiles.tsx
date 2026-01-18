@@ -60,14 +60,14 @@ const PageRecordingProfiles = () => {
       </div>
       <div className="px-10 py-10 h-full overflow-hidden bg-[#DBDBDB] dark:bg-[#0F1827]">
         <div className="h-full overflow-y-auto table-scroll">
-          <table className="w-full text-center bg-white dark:bg-[#070F19]">
-            <thead className="bg-white dark:bg-[#070F19]">
-              <tr className="border-b-2 border-[#DBDBDB] dark:border-[#585353]">
-                <th className="p-2"></th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Название</th>
-                <th className="p-2">Отключить </th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Количество камер</th>
-                <th className="p-2 w-2/6"></th>
+          <table className="w-full text-center bg-white dark:bg-[#070F19] ">
+            <thead className="bg-white dark:bg-[#070F19] sticky top-0 outline-2 h-11 outline-[#585353]">
+              <tr>
+                <th className='text-2xl'>ℕ</th>
+                <th><span className='border-x-2 flex h-10 items-center justify-center border-[#585353]'>Название</span></th>
+                <th>Отключить </th>
+                <th><span className='border-x-2 flex h-10 items-center justify-center border-[#585353]'>Количество камер</span></th>
+                <th className="w-2/6"></th>
               </tr>
             </thead>
 

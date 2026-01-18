@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import { Header } from "@/src/components/shared/adminShared/header";
+interface Props {
+  children: React.ReactNode;
+}
 
 export const metadata: Metadata = {
   title: "Danso Digital | Администрирование",
-  description: "pass",
+  description: "",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Admin({ children }: Props) {
   return (
-    <main className="h-screen flex flex-col overflow-hidden">
+    <div className="admin-home">
       <Header />
       {children}
-    </main>
+    </div>
   );
 }

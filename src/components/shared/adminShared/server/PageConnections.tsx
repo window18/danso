@@ -57,16 +57,16 @@ const PageConnections = () => {
       <div className="px-10 py-10 h-full overflow-hidden bg-[#DBDBDB] dark:bg-[#0F1827]">
         <div className="h-full overflow-y-auto table-scroll">
           <table className="w-full text-center bg-white dark:bg-[#070F19]">
-            <thead className="bg-white dark:bg-[#070F19]">
-              <tr className="border-b-2 border-[#DBDBDB] dark:border-[#585353]">
-                <th className="p-2"></th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Камера</th>
-                <th className="p-2">Айпи</th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Поток видио</th>
-                <th className="p-2">Резервирование</th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Работа</th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Тип камеры</th>
-                <th className="p-2 w-2/6"></th>
+            <thead className="bg-white dark:bg-[#070F19] sticky top-0 outline-[#585353] outline-2 h-11">
+              <tr>
+                <th className="text-2xl">ℕ</th>
+                <th><span className='flex h-11 items-center justify-center border-x-2 border-[#585353]'>Камера</span></th>
+                <th>Айпи</th>
+                <th><span className='flex h-11 items-center justify-center border-x-2 border-[#585353]'>Поток видио</span></th>
+                <th>Резервирование</th>
+                <th><span className='flex h-11 items-center justify-center border-x-2 border-[#585353]'>Работа</span></th>
+                <th><span className='flex h-11 items-center justify-center border-r-2 border-[#585353]'>Тип камеры</span></th>
+                <th className=" w-2/6"></th>
               </tr>
             </thead>
 

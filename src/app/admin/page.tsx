@@ -1,15 +1,15 @@
 "use client";
-import { Input } from "../../../components/ui/input";
-import { Label } from "../../../components/ui/label";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
 import { Plus } from "lucide-react";
-import { Button } from "../../../components/ui/button";
-import { Checkbox } from "../../../components/ui/checkbox";
+import { Button } from "../../components/ui/button";
+import { Checkbox } from "../../components/ui/checkbox";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../components/ui/accordion";
+} from "../../components/ui/accordion";
 import {
   Select,
   SelectContent,
@@ -17,13 +17,13 @@ import {
   SelectTrigger,
   SelectGroup,
   SelectValue,
-} from "../../../components/ui/select";
+} from "../../components/ui/select";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "../../../components/ui/dropdown-menu";
-import { AsideAdminCamera } from "../../../components/shared/adminShared/asideCamera";
+} from "../../components/ui/dropdown-menu";
+import { AsideAdminCamera } from "../../components/shared/adminShared/asideCamera";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -32,8 +32,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} from "../../../components/ui/field";
-import { Textarea } from "../../../components/ui/textarea";
+} from "../../components/ui/field";
+import { Textarea } from "../../components/ui/textarea";
 
 export default function Admin() {
   const [activeTab, setActiveTab] = useState(1);
@@ -48,8 +48,8 @@ export default function Admin() {
   ];
 
   return (
-    <div className="ml-26 h-full flex flex-row gap-7">
-      <div className="h-full w-full flex flex-col gap-4 py-5">
+    <div className="pl-26 flex gap-7 admin">
+      <div className="w-full flex flex-col gap-4 py-5">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button className="w-[175px] h-[45px] bg-[#3060FE] hover:bg-[#3060FE]/90 text-white font-black text-[14px] flex items-center gap-2 cursor-pointer">

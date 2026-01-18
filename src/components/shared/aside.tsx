@@ -14,7 +14,7 @@ export const Aside: React.FC<Props> = ({ className }) => {
   const [tab, setTab] = useState<"online" | "archive">("online");
 
   return (
-    <div className={cn("h-full w-[500px] flex flex-col gap-5", className)}>
+    <div className={cn("w-[500px] flex flex-col gap-5", className)}>
       {/* ПЕРЕКЛЮЧАТЕЛЬ — БЕЗ ОТСТУПОВ, ЧИСТО И КРАСИВО */}
       <div className="w-full bg-[#E3E3E3] dark:bg-[#070F19] rounded-lg overflow-hidden">
         <div className="relative flex h-11">

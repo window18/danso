@@ -81,7 +81,7 @@ export const RightAside: React.FC<{ className?: string }> = ({ className }) => {
   };
 
   return (
-    <div className={cn("w-full h-full flex flex-col gap-5", className)}>
+    <div className={cn("w-full flex flex-col gap-5", className)}>
       <div className="h-12 w-full flex items-center gap-12">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

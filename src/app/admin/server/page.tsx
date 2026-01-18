@@ -30,24 +30,24 @@ const Server = () => {
   const [selectedNav, setSelectedNav] = useState(navList[0]);
 
   return (
-    <div className="h-[90%] pt-[30px] px-[55px] flex gap-5">
-      <div className="bg-[#DBDBDB] dark:bg-[#0F1827] h-full w-[300px] rounded-lg flex flex-col overflow-hidden">
+    <div className="py-[30px] px-[55px] flex gap-5 admin">
+      <div className="bg-[#DBDBDB] dark:bg-[#0F1827] h-full w-[300px] rounded-lg flex flex-col">
         {navList.map((item) => (
           <div
             key={item}
             onClick={() => setSelectedNav(item)}
             className={`
               relative py-3 px-4 cursor-pointer transition-all duration-200
-              hover:bg-[#E5E5E5] dark:hover:bg-[#1E293B]
+              hover:bg-[#E5E5E5] dark:hover:bg-[#1E293B] hover:rounded-lg
               ${
                 selectedNav === item
-                  ? "bg-[#E5E5E5] dark:bg-[#1E293B] font-medium"
+                  ? "bg-[#E5E5E5] dark:bg-[#1E293B] font-medium rounded-lg"
                   : ""
               }
             `}
           >
             {selectedNav === item && (
-              <div className="absolute right-0 top-0 bottom-0 w-1 bg-blue-600 rounded-l-md" />
+              <div className="absolute right-0 top-2 bottom-0 w-1 bg-blue-600 rounded-md h-8" />
             )}
 
             <span className="relative z-10">{item}</span>
@@ -55,7 +55,7 @@ const Server = () => {
         ))}
       </div>
 
-      <div className="w-full rounded-lg">
+      <div className="w-full h-full">
         {selectedNav === navList[0] && <PageInfo />}
         {selectedNav === navList[1] && <PageUsers />}
         {selectedNav === navList[2] && <PageEvents />}

@@ -5,6 +5,18 @@ body {
     font-family: var(--font-inter);
 }
 
+.admin {
+    height: calc(100dvh - 53px - 65px);
+}
+.admin-home {
+    height: calc(100dvh - 54px);
+}
+.admin-table {
+    height: calc(100dvh - 284.5px - 280px);
+}
+.admin-table-two{
+    height: calc(100dvh - 385px);
+}
 @custom-variant dark (&:is(.dark *));
 
 /* ===== Scrollbar for tables ===== */

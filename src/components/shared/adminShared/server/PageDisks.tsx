@@ -57,19 +57,19 @@ const PageDisks = () => {
       <div className="px-10 py-10 h-full overflow-hidden bg-[#DBDBDB] dark:bg-[#0F1827]">
         <div className="h-full overflow-y-auto table-scroll">
           <table className="w-full text-center bg-white dark:bg-[#070F19]">
-            <thead className="bg-white dark:bg-[#070F19]">
-              <tr className="border-b-2 border-[#DBDBDB] dark:border-[#585353]">
-                <th className="p-2"></th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Название</th>
-                <th className="p-2">Использывать</th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Размер</th>
-                <th className="p-2">Занято</th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Свободно</th>
-                <th className="p-2">Квота</th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Минн своб.
-                места</th>
-                <th className="p-2">События</th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Описания</th>
+            <thead className="bg-white dark:bg-[#070F19] outline-2 outline-[#585353] h-11 sticky top-0">
+              <tr>
+                <th className="text-2xl">ℕ</th>
+                <th className=""><span className='border-x-2 border-[#585353] flex items-center justify-center h-10'>Название</span></th>
+                <th className="">Использывать</th>
+                <th className=""><span className='border-x-2 border-[#585353] flex items-center justify-center h-10'>Размер</span></th>
+                <th className="">Занято</th>
+                <th className=""><span className='border-x-2 border-[#585353] flex items-center justify-center h-10'>Свободно</span></th>
+                <th className="">Квота</th>
+                <th className=""><span className='border-x-2 border-[#585353] flex items-center justify-center h-10'>Минн своб.
+                места</span></th>
+                <th className="">События</th>
+                <th className=""><span className='border-x-2 border-[#585353] flex items-center justify-center h-10'>Описания</span></th>
               </tr>
             </thead>
 

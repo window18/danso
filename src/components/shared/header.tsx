@@ -20,7 +20,7 @@ export const Header: React.FC<Props> = ({ className }) => {
     { href: "/video", label: "Видеонаблюдения" },
     { href: "/", label: "Главная" },
     { href: "/search", label: "Поиск по ШК" },
-    { href: "/admin/", label: "Администрирование" },
+    { href: "/admin", label: "Администрирование" },
   ];
 
   return (
@@ -48,27 +48,26 @@ export const Header: React.FC<Props> = ({ className }) => {
           <div className="gap-8 flex">
             {navItems.map((item) => {
               const isActive =
-                item.href === "/admin/"
+                item.href === "/admin"
                   ? pathname.startsWith("/admin")
                   : pathname === item.href;
-
+            
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "relative px-3 py-2 text-sm font-medium  transition-all duration-150",
+                    "relative px-3 py-2 text-sm font-medium transition-all duration-150",
                     isActive
                       ? "text-foreground font-bold"
-                      : "text-[#6C6C6C] dark:text-white",
+                      : "text-[#6C6C6C] dark:text-white"
                   )}
                 >
                   {item.label}
-
-                  {/* Анимированная зелёная полоса — только если активна */}
+            
                   {isActive && (
                     <motion.span
-                      layoutId="navbar-underline" // Один layoutId — одна полоса на весь сайт
+                      layoutId="navbar-underline"
                       className="absolute inset-x-0 -bottom-2.5 h-[3px] bg-[#07FF2F] rounded-full"
                       initial={false}
                       transition={{
@@ -81,6 +80,7 @@ export const Header: React.FC<Props> = ({ className }) => {
                 </Link>
               );
             })}
+
           </div>
         </nav>
       </div>

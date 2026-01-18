@@ -57,13 +57,13 @@ const PageSchedule = () => {
       <div className="px-10 py-10 h-full overflow-hidden bg-[#DBDBDB] dark:bg-[#0F1827]">
         <div className="h-full overflow-y-auto table-scroll">
           <table className="w-full text-center bg-white dark:bg-[#070F19]">
-            <thead className="bg-white dark:bg-[#070F19]">
-              <tr className="border-b-2 border-[#DBDBDB] dark:border-[#585353]">
-                <th className="p-2"></th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Название</th>
-                <th className="p-2">Отключить </th>
-                <th className="p-2 border-x-2 border-[#DBDBDB] dark:border-[#585353]">Описание</th>
-                <th className="p-2 w-2/6"></th>
+            <thead className="bg-white dark:bg-[#070F19] sticky top-0 outline-2 outline-[#585353] h-11">
+              <tr>
+                <th className="text-2xl">ℕ</th>
+                <th><span className='border-x-2 flex h-10 border-[#585353] justify-center items-center'>Название</span></th>
+                <th>Отключить </th>
+                <th><span className='border-x-2 flex h-10 border-[#585353] justify-center items-center'>Описание</span></th>
+                <th className=" w-2/6"></th>
               </tr>
             </thead>
 
