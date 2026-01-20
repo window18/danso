@@ -39,7 +39,7 @@ export const Header: React.FC<Props> = ({ className }) => {
               key={item.href}
               href={item.href}
               className={cn(
-                "relative px-1 text-sm font-medium transition-all duration-300",
+                "relative px-1 text-sm font-medium transition-all duration-300 max-lg:text-[11px]",
                 isActive
                   ? "text-gray-900 dark:text-white"
                   : "text-gray-600 hover:text-gray-900 dark:text-white",
@@ -50,7 +50,7 @@ export const Header: React.FC<Props> = ({ className }) => {
               {isActive && (
                 <motion.div
                   layoutId="admin-nav-underline"
-                  className="absolute -bottom-6 left-0 right-0 h-1 bg-blue-600 rounded-full"
+                  className="absolute -bottom-6 left-0 right-0 h-1 bg-blue-600 rounded-full max-lg:-bottom-[27px]"
                   initial={false}
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />

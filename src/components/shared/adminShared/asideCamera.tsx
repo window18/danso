@@ -27,99 +27,10 @@ interface Props {
 export const AsideAdminCamera: React.FC<Props> = ({ className }) => {
   const invoices = [
     {
+      id: 0,
       active: true,
       invoice: "Camera 1",
       ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: true,
-      invoice: "Camera 1",
-      ip: "192.168.1.1",
-      totalAmount: "copy",
-    },
-    {
-      active: false,
-      invoice: "Camera 2",
-      ip: "none",
       totalAmount: "copy",
     },
   ];
@@ -258,7 +169,7 @@ export const AsideAdminCamera: React.FC<Props> = ({ className }) => {
             </TableHeader>
             <TableBody>
               {invoices.map((invoice) => (
-                <TableRow key={invoice.invoice}>
+                <TableRow key={invoice.id}>
                   <TableCell className="font-medium flex items-center gap-1">
                     <span
                       className={cn(
