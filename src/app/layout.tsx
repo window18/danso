@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning>
       <body
-        className={` bg-[white] dark:bg-[#0C131F] h-screen flex flex-col ${inter.variable}`}
+        className={` dark:bg-[#0C131F] h-screen flex flex-col ${inter.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header></Header>

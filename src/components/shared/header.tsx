@@ -84,7 +84,6 @@ export const Header: React.FC<Props> = ({ className }) => {
             </div>
           </nav>
         </div>
-        {/* Правая часть */}
         <div className="flex items-center justify-end gap-3.5 pr-4 absolute right-0">
           <ThemeToggle />
           <HeaderModal />
@@ -95,17 +94,53 @@ export const Header: React.FC<Props> = ({ className }) => {
       </header>
       <div className="hidden max-lg:block">
         {activeNav && (
-          <div className="w-full z-10 absolute h-full top-0 bg-black/50 flex flex-col items-center justify-center">
+          <div className="w-full z-10 absolute h-full top-0 bg-black/50 flex flex-col items-center justify-center"  onClick={() => setActiveNav(false)}>
             <div className="absolute left-1.5 top-1.5 cursor-pointer bg-gray-500 w-10 h-10 rounded-md" onClick={() => setActiveNav(false)}>
-              <span className=""><CircleX size={40}/></span>
+              <span><CircleX size={40} className="text-white dark:text-black"/></span>
             </div>
-            <div className="">
-              <nav>
-                {navItems.map((item) => (
-                  <div key={item.id}>
-                    <Link href={item.href} onClick={() => setActiveNav(false)}>{item.label}</Link>
-                  </div>
-                ))}
+            <div className="dark:bg-[#0F1827] w-60 h-50 rounded-2xl bg-gray-400 text-white"   onClick={(e) => e.stopPropagation()}>
+              <nav className="relative px-10 py-10 flex flex-col gap-2">
+                {navItems.map((item) => {
+                  const isActive = pathname === item.href
+            
+                  return (
+                    <div key={item.id} className="relative">
+                      {isActive && (
+                        <span
+                          className="
+                            absolute
+                            -left-5
+                            top-1/2
+                            -translate-y-1/2
+                            w-2.5
+                            h-2.5
+                            rounded-full
+                            bg-blue-500
+                          "
+                        />
+                      )}
+            
+                      <Link
+                        href={item.href}
+                        onClick={() => setActiveNav(false)}
+                        className={cn(
+                          'relative inline-block pb-1 transition-colors',
+                          isActive ? 'text-blue-400' : 'text-white'
+                        )}
+                      >
+                        {item.label}
+            
+                        {/* Нижнее подчёркивание */}
+                        <span
+                          className={cn(
+                            'absolute left-0 -bottom-0.5 h-0.5 bg-blue-500 transition-all duration-300',
+                            isActive ? 'w-full' : 'w-0'
+                          )}
+                        />
+                      </Link>
+                    </div>
+                  )
+                })}
               </nav>
             </div>
             

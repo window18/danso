@@ -11,6 +11,9 @@ body {
 .admin-home {
     height: calc(100dvh - 54px);
 }
+.home {
+    height: calc(100dvh - 53px);
+}
 .admin-table {
     height: calc(100dvh - 284.5px - 280px);
 }
