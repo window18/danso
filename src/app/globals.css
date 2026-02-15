@@ -8,6 +8,9 @@ body {
 .admin {
     height: calc(100dvh - 53px - 65px);
 }
+.admin-photo-add{
+    height: calc(100dvh - 45px - 65px - 100px);
+}
 .admin-home {
     height: calc(100dvh - 54px);
 }

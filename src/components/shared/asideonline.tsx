@@ -3,13 +3,12 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import { SearchIcon } from "lucide-react";
+import { ArrowUpFromLine, SearchIcon } from "lucide-react";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
 } from "../ui/input-group";
-import Image from "next/image";
 interface Props {
   className?: string;
 }
@@ -34,16 +33,9 @@ const tabContent: Record<Tab, React.ReactNode> = {
           <SearchIcon />
         </InputGroupAddon>
       </InputGroup>
-      <div className="absolute top-[250px] flex flex-col items-center">
-        <Image
-          src="/gre.png"
-          alt="Terminal"
-          width="65"
-          height="35"
-          className="rotate-1 w-auto h-auto"
-          priority
-        />
-        <p className="font-bold text-[15px] text-[#555555]">
+      <div className="absolute top-[250px] flex flex-col items-center gap-4">
+        <ArrowUpFromLine size={100}/>
+        <p className="text-[15px] text-[#555555] dark:text-white">
           Ведите данные <br />
           для поиска
         </p>

@@ -36,7 +36,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "src/components/shared/rightaside.jsx"
-, "src/app/page.jsx"  ],
+, "src/app/page.jsx", "src/components/shared/adminShared/asideCamera.tsx", "src/app/admin/mapcamera/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
