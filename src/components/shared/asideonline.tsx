@@ -23,8 +23,38 @@ const tabs: { key: Tab; label: string }[] = [
 ];
 
 const tabContent: Record<Tab, React.ReactNode> = {
-  all: <div className="px-5 text-center text-2xl">Контент «Все»</div>,
-  branch: <div className="px-5 text-center text-2xl">Контент «Отделение»</div>,
+  all: (
+    <div className="px-5 relative flex items-center flex-col">
+      <InputGroup className="bg-[#CFCFCF] h-10 dark:bg-[#070F19]">
+        <InputGroupInput placeholder="Поиск" />
+        <InputGroupAddon>
+          <SearchIcon />
+        </InputGroupAddon>
+      </InputGroup>
+      <div className="absolute top-[250px] flex flex-col items-center gap-4">
+        <ArrowUpFromLine size={100} />
+        <p className="text-[15px] text-[#555555] dark:text-white">
+          Ведите данные <br />
+          для поиска
+        </p>
+      </div>
+    </div>),
+  branch: (
+    <div className="px-5 relative flex items-center flex-col">
+      <InputGroup className="bg-[#CFCFCF] h-10 dark:bg-[#070F19]">
+        <InputGroupInput placeholder="Поиск" />
+        <InputGroupAddon>
+          <SearchIcon />
+        </InputGroupAddon>
+      </InputGroup>
+      <div className="absolute top-[250px] flex flex-col items-center gap-4">
+        <ArrowUpFromLine size={100} />
+        <p className="text-[15px] text-[#555555] dark:text-white">
+          Ведите данные <br />
+          для поиска
+        </p>
+      </div>
+    </div>),
   terminal: (
     <div className="px-5 relative flex items-center flex-col">
       <InputGroup className="bg-[#CFCFCF] h-10 dark:bg-[#070F19]">
@@ -34,7 +64,7 @@ const tabContent: Record<Tab, React.ReactNode> = {
         </InputGroupAddon>
       </InputGroup>
       <div className="absolute top-[250px] flex flex-col items-center gap-4">
-        <ArrowUpFromLine size={100}/>
+        <ArrowUpFromLine size={100} />
         <p className="text-[15px] text-[#555555] dark:text-white">
           Ведите данные <br />
           для поиска
@@ -42,7 +72,23 @@ const tabContent: Record<Tab, React.ReactNode> = {
       </div>
     </div>
   ),
-  delivery: <div className="px-5 text-center text-2xl">Контент «Доставка»</div>,
+  delivery: (
+    <div className="px-5 relative flex items-center flex-col">
+      <InputGroup className="bg-[#CFCFCF] h-10 dark:bg-[#070F19]">
+        <InputGroupInput placeholder="Поиск" />
+        <InputGroupAddon>
+          <SearchIcon />
+        </InputGroupAddon>
+      </InputGroup>
+      <div className="absolute top-[250px] flex flex-col items-center gap-4">
+        <ArrowUpFromLine size={100} />
+        <p className="text-[15px] text-[#555555] dark:text-white">
+          Ведите данные <br />
+          для поиска
+        </p>
+      </div>
+    </div>
+  ),
 };
 
 export const Online: React.FC<Props> = ({ className }) => {

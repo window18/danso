@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const PageEvents = () => {
   return (
@@ -17,7 +16,7 @@ const PageEvents = () => {
           <p className="font-light text-[14px]">Журнал Событий сервера</p>
         </div>
       </div>
-      <div className="bg-[#DBDBDB] dark:bg-[#0F1827] py-10 px-20 grid xl:grid-cols-4 items-center gap-10 md:grid-cols-2 sm:grid-cols-1">
+      <div className="bg-[#DBDBDB] dark:bg-[#0F1827] py-[15px] px-20 grid xl:grid-cols-4 items-center gap-10 md:grid-cols-2 sm:grid-cols-1">
         <div className="cursor-pointer flex items-center gap-4">
           <Image
             src="/free-icon-search-11741045 1.png"

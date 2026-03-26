@@ -18,7 +18,7 @@ const PageActions = () => {
           </span>
         </div>
       </div>
-      <div className="bg-[#DBDBDB] dark:bg-[#0F1827] h-[90px] px-[45px] items-center flex gap-10">
+      <div className="bg-[#DBDBDB] dark:bg-[#0F1827] px-[45px] py-[15px] items-center flex gap-10">
         <div className="cursor-pointer flex items-center gap-2">
           <Image
             src="/ss.png"
