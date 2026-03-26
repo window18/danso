@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
 import { Switch } from "@/src/components/ui/switch";
 import { Input } from "@/src/components/ui/input";
 import {
@@ -12,6 +11,7 @@ import {
 } from "@/src/components/ui/select";
 import { Label } from "../../ui/label";
 import { Button } from "../../ui/button";
+import { useState } from "react";
 import Table from "@/src/components/shared/table-admin"
 export const AsideAdminCamera = () => {
   const country = [
@@ -42,10 +42,9 @@ export const AsideAdminCamera = () => {
     Польша: ["Варшава", "Краков"],
   };
 
-  type CountryName = keyof typeof citiesByCountry;
 
-  const [selectedCountry, setSelectedCountry] = useState<CountryName | "">("");
-  const [, setSelectedCity] = useState<string>("");
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [, setSelectedCity] = useState("");
 
   return (
     <div
@@ -120,7 +119,7 @@ export const AsideAdminCamera = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  {(citiesByCountry[selectedCountry as CountryName] || []).map(
+                  {(citiesByCountry[selectedCountry] || []).map(
                     (city) => (
                       <SelectItem key={city} value={city}>
                         {city}
